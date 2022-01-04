@@ -30,9 +30,9 @@ const App = () => {
   // empty value and unique ids.
   const [squares, setSquares] = useState(generateSquares());
 
-  const [isX, setIsX] = useState(true);
+  const [isX, setIsX] = useState(false);
 
-  const currentPlayer = isX ? player1 : player2;
+  const currentPlayer = isX ? player2 : player1;
 
   const updateSquare = (id) => {
     let newSquares = [];
@@ -40,7 +40,7 @@ const App = () => {
     for (let row = 0; row < 3; row += 1) {
       newSquares.push([]);
       for (let col = 0; col < 3; col == 1) {
-        if (id === squares[row[col]].id) {
+        if (id === squares[row][col].id) {
           if (!squares[row][col].value) {
             squares[row][col].value = currentPlayer;
             setIsX(!isX);
