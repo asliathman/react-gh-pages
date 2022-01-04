@@ -30,9 +30,9 @@ const App = () => {
   // empty value and unique ids.
   const [squares, setSquares] = useState(generateSquares());
 
-  const [isX, setIsX] = useState(True);
+  const [isX, setIsX] = useState(true);
 
-  const currentPlayer = isX ? 'X' : 'O';
+  const currentPlayer = isX ? player1 : player2;
 
   const updateSquare = (id) => {
     let newSquares = [];
@@ -46,11 +46,11 @@ const App = () => {
             setIsX(!isX);
           }
         }
-        newSquares[row].push(squares[row][col])
+        newSquares[row].push(squares[row][col]);
       }
     }
     setSquares(newSquares);
-  }
+  };
 
   const checkForWinner = () => {
     let i = 0;
@@ -105,7 +105,7 @@ const App = () => {
         <button>Reset Game</button>
       </header>
       <main>
-        <Board squares={squares} />
+        <Board squares={squares} onClickCallback={updateSquare} />
       </main>
     </div>
   );
