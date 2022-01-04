@@ -20,7 +20,6 @@ const Square = (props) => {
 
   const selectedSquare = () => {
     props.onClickCallback(props.id);
-    
   };
 
   return <button className='square' id={color} onClick={selectedSquare}>{props.value}</button>;

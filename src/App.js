@@ -3,8 +3,8 @@ import './App.css';
 
 import Board from './components/Board';
 
-const player1 = 'x';
-const player2 = 'o';
+const player1 = 'X';
+const player2 = 'O';
 
 const generateSquares = () => {
   const squares = [];
@@ -97,14 +97,14 @@ const App = () => {
     setSquares(generateSquares());
   };
 
-  const headerMessage = checkForWinner() ? `Winner is ${checkForWinner()}` : `The current player is '${currentPlayer}'`;
+  const headerMessage = checkForWinner() ? `The winner is ${checkForWinner()}!!!` : `Current player: ${currentPlayer}`;
 
   return (
     <div className='App'>
       <header className='App-header'>
-        <h1>TIC TAC TOE</h1>
+        <h1>TIC-TAC-TOE</h1>
         <h2>{headerMessage}</h2>
-        <button onClick={resetGame}>Reset Game</button>
+        <button onClick={resetGame}>reset</button>
       </header>
       <main>
         <Board squares={squares} onClickCallback={checkForWinner() ? () => {} : updateSquare} />
