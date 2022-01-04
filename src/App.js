@@ -97,7 +97,7 @@ const App = () => {
     setSquares(generateSquares());
   };
 
-  const headerMessage = checkForWinner() ? `Winner is ${checkForWinner()}!!!` : `The current player is....${currentPlayer}`;
+  const headerMessage = checkForWinner() ? `Winner is ${checkForWinner()}` : `The current player is....${currentPlayer}`;
 
   return (
     <div className='App'>
