@@ -39,7 +39,7 @@ const App = () => {
 
     for (let row = 0; row < 3; row += 1) {
       newSquares.push([]);
-      for (let col = 0; col < 3; col == 1) {
+      for (let col = 0; col < 3; col += 1) {
         if (id === squares[row][col].id) {
           if (!squares[row][col].value) {
             squares[row][col].value = currentPlayer;
