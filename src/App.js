@@ -4,7 +4,7 @@ import './App.css';
 import Board from './components/Board';
 
 const player1 = 'x';
-const player2 = 'O';
+const player2 = 'o';
 
 const generateSquares = () => {
   const squares = [];
