@@ -10,3 +10,8 @@
   align-items: center;
   margin: 2px;
 }
+
+.square:hover {
+  background-color: aquamarine;
+}
+
