@@ -97,12 +97,12 @@ const App = () => {
     setSquares(generateSquares());
   };
 
-  const headerMessage = checkForWinner() ? `Winner is ${checkForWinner()}` : `The current player is....${currentPlayer}`;
+  const headerMessage = checkForWinner() ? `Winner is ${checkForWinner()}` : `The current player is '${currentPlayer}'`;
 
   return (
     <div className='App'>
       <header className='App-header'>
-        <h1>React Tic Tac Toe</h1>
+        <h1>TIC TAC TOE</h1>
         <h2>{headerMessage}</h2>
         <button onClick={resetGame}>Reset Game</button>
       </header>
