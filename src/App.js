@@ -3,7 +3,7 @@ import './App.css';
 
 import Board from './components/Board';
 
-const player1 = 'X';
+const player1 = 'x';
 const player2 = 'O';
 
 const generateSquares = () => {
